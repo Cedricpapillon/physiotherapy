@@ -32,8 +32,11 @@
 
         function loadModel() {
             const loader = new THREE.OBJLoader();
-            loader.load('models/FinalBaseMesh.obj', function(obj) {
+            // Update the path to the OBJ file to reflect its location in the root directory
+            loader.load('FinalBaseMesh.obj', function(obj) {
                 console.log('Model loaded successfully');
+                obj.position.set(0, 0, 0); // Center the model
+                obj.scale.set(0.1, 0.1, 0.1); // Adjust scale if necessary
                 scene.add(obj);
             }, function(xhr) {
                 console.log((xhr.loaded / xhr.total * 100) + '% loaded');
@@ -41,6 +44,7 @@
                 console.error('An error happened during loading: ', error);
             });
         }
+
 
         function animate() {
             requestAnimationFrame(animate);
