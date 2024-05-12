@@ -38,9 +38,12 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-document.getElementById('toggleModel').addEventListener('click', function() {
-    currentGender = (currentGender === 'male') ? 'female' : 'male';
-    loadModel(currentGender);
+document.getElementById('toggleMale').addEventListener('click', function() {
+    loadModel('male');
+});
+
+document.getElementById('toggleFemale').addEventListener('click', function() {
+    loadModel('female');
 });
 
 window.addEventListener('resize', () => {
