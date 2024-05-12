@@ -33,12 +33,12 @@
         function loadModel() {
             const loader = new THREE.OBJLoader();
             loader.load('models/FinalBaseMesh.obj', function(obj) {
-                // You may need to adjust the object's scale, position, or rotation here
-                obj.position.set(0, -1, 0); // Adjust position if needed
-                obj.scale.set(0.1, 0.1, 0.1); // Adjust scale if needed
+                console.log('Model loaded successfully');
                 scene.add(obj);
-            }, undefined, function(error) {
-                console.error('An error happened during loading model: ', error);
+            }, function(xhr) {
+                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            }, function(error) {
+                console.error('An error happened during loading: ', error);
             });
         }
 
