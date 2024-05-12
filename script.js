@@ -1,7 +1,7 @@
 let scene, camera, renderer, currentModel;
 const modelPaths = {
-    male: 'models/sculpt_male.gltf',
-    female: 'models/sculpt_female.gltf'
+    male: 'https://github.com/Cedricpapillon/physiotherapy/tree/main/models/sculpt_male.gltf',
+    female: 'https://github.com/Cedricpapillon/physiotherapy/tree/main/models/sculpt_female.gltf'
 };
 let currentGender = 'male'; // Start with the male model
 
