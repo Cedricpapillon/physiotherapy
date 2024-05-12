@@ -49,7 +49,7 @@
 
     function loadModel() {
         const loader = new THREE.OBJLoader();
-        loader.load('C:\Users\Cedri\OneDrive\Documents\ChrisWebsite\FinalBaseMesh.obj', function(obj) {
+        loader.load('physiotherapy/FinalBaseMesh.obj', function(obj) {
             scene.add(obj);
         }, undefined, function(error) {
             console.error('An error happened during loading model: ', error);
